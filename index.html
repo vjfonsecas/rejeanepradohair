@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Hair Rejeane Prado | Salão de Beleza em Silveiras - SP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #D4AF37; /* Dourado principal */
+            --secondary: #d147a3; /* Rosa secundário */
+            --light: #FFF8E1; /* Bege claro */
+            --dark: #3E2723; /* Marrom escuro */
+            --gray: #8D6E63; /* Marrom médio */
+            --light-gray: #F5F0E6; /* Bege claro suave */
+            --dark-gray: #5D4037; /* Marrom escuro */
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light);
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .top-bar {
+            background-color: var(--primary);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .badge {
+            background-color: var(--secondary);
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary); /* Todo o logo em dourado */
+            line-height: 1;
+        }
+        
+        .salon-info {
+            font-size: 14px;
+            color: var(--dark-gray);
+            font-weight: 500;
+            margin-top: 5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .btn-agendamento {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-agendamento:hover {
+            background-color: #B8860B;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(62, 39, 35, 0.85), rgba(62, 39, 35, 0.85)), url('images/salao.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            color: var(--primary);
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: white;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        
+        /* Services */
+        .services {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--primary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 20px auto 0;
+            color: var(--gray);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 30px;
+            border: 2px solid var(--primary);
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .service-card p {
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+        
+        /* About */
+        .about {
+            padding: 100px 0;
+            background: linear-gradient(to right, white 50%, var(--primary) 50%);
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-content {
+            padding: 30px 0;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-content p {
+            margin-bottom: 25px;
+            color: var(--gray);
+        }
+        
+        .about-stats {
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Imagem central ajustada conforme solicitado */
+        .about-image {
+            background: url('images/rejeane.jpg') no-repeat center center/cover;
+            border-radius: 10px;
+            height: 675px; /* Altura ajustada */
+            width: 450px; /* Largura ajustada */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin: 0 auto; /* Centraliza a imagem */
+            border: 5px solid white;
+        }
+        
+        /* Mission */
+        .mission {
+            background-color: var(--primary);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .mission-card {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255,255,255,0.15);
+        }
+        
+        .mission-icon {
+            font-size: 40px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .mission-card h3 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        /* Services Gallery */
+        .services-gallery {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 500px;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(62, 39, 35, 0.8));
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        
+        .gallery-overlay h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        /* Contact */
+        .contact {
+            padding: 100px 0;
+            background-color: var(--primary);
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .contact-info {
+            color: white;
+            padding: 30px;
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .contact-info h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: white;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .contact-items-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            color: var(--primary);
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .hours {
+            margin-top: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .hours h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .copyright {
+            font-size: 14px;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 8px;
+            font-size: 20px;
+            transition: all 0.3s;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about {
+                background: white;
+            }
+            
+            .contact-items-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .gallery-item {
+                height: 400px;
+            }
+            
+            .about-image {
+                width: 100%;
+                max-width: 333px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            
+            .top-bar-content {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+            
+            .about-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .salon-info {
+                font-size: 12px;
+            }
+            
+            .gallery-item {
+                height: 350px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .gallery-item {
+                height: 300px;
+            }
+            
+            .about-image {
+                height: 400px;
+            }
+        }
+        
+        .menu-toggle {
+            display: none;
+        }
+        
+        /* Custom Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        .delay-4 { animation-delay: 0.8s; }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div><i class="fab fa-instagram"></i> @rejeanepradohair</div>
+            <div><i class="fas fa-phone"></i> (12) 99604-5974</div>
+        </div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo-container">
+                <!-- Logo todo em dourado -->
+                <div class="logo">Espaço Hair</div>
+                <div class="salon-info">Rejeane Prado | Salão de Beleza</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="https://wa.me/5512996045974" class="btn-agendamento" target="_blank">
+                <i class="fab fa-whatsapp"></i> Agendar Horário
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Espaço Hair Rejeane Prado</h1>
+            <h2>Transformando cabelos, elevando autoestimas</h2>
+            <p>No coração de Silveiras, ofereço tratamentos capilares de excelência que realçam sua beleza natural. Descubra a diferença de um atendimento personalizado com uma profissional apaixonada pelo que faço.</p>
+            <a href="https://wa.me/5512996045974" class="btn-agendamento" target="_blank">
+                <i class="fab fa-whatsapp"></i> Agendar Horário
+            </a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicos" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meus Serviços</h2>
+                <p>Descubra minha gama de tratamentos capilares que vão além da estética, proporcionando saúde e vitalidade aos seus fios.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Progressiva</h3>
+                    <p>Transformo seu cabelo com minha progressiva profissional que alisa sem agredir, proporcionando fios sedosos e brilhantes por até 3 meses. Livre de formol e com proteção térmica.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Hidratação</h3>
+                    <p>Nutrição profunda para cabelos ressecados e danificados. Recupero a vitalidade perdida com tratamentos que devolvem maciez, brilho e elasticidade aos seus fios.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Ozonioterapia</h3>
+                    <p>Tratamento revolucionário que utilizo para revitalizar profundamente os fios, eliminando toxinas e promovendo crescimento saudável. Resultados visíveis desde a primeira aplicação.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Corte</h3>
+                    <p>Cortes personalizados que valorizam seu visual e estilo de vida. Do clássico ao moderno, transformo seu visual com técnica e criatividade.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>Escova</h3>
+                    <p>Escovas perfeitas que duram o dia todo. Utilizo produtos de alta qualidade e técnicas profissionais para modelar seus fios sem danificá-los.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Coloração</h3>
+                    <p>Mude sua cor com segurança e estilo. Trabalho com as melhores marcas do mercado para resultados vibrantes que respeitam a saúde dos seus fios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2>Bem-vinda ao Espaço Hair</h2>
+                <p>Há mais de 10 anos transformando cabelos e elevando autoestimas em Silveiras e região.</p>
+                <p>Fundado por mim, Rejeane Prado, apaixonada por beleza capilar, meu salão combina técnicas avançadas com atendimento personalizado. Aqui, cada cliente é único e recebe minha atenção especial para realçar sua beleza natural.</p>
+                
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>10+</h3>
+                        <p>Anos de Experiência</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <h3>5000+</h3>
+                        <p>Clientes Satisfeitas</p>
+                    </div>
+                    
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Dedicação</p>
+                    </div>
+                </div>
+                
+                <a href="https://wa.me/5512996045974" class="btn-agendamento" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agendar Horário
+                </a>
+            </div>
+            
+            <!-- Imagem central com dimensões ajustadas -->
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Minha Missão</h3>
+                    <p>Proporcionar experiências transformadoras através de serviços capilares de excelência, valorizando a autoestima e o bem-estar de cada cliente que passa por minhas mãos.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Minha Visão</h3>
+                    <p>Ser reconhecida como referência em beleza capilar na região, destacando-me pela qualidade técnica, inovação constante e relacionamento próximo com minhas clientes.</p>
+                </div>
+                
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Meus Valores</h3>
+                    <p>Excelência técnica, atendimento personalizado, ética profissional, inovação constante e amor pelo que faço. Cada fio tratado com carinho e profissionalismo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Gallery -->
+    <section class="services-gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meus Trabalhos</h2>
+                <p>Alguns resultados que transformaram minhas clientes</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- Imagem 1: Progressiva -->
+                    <img src="images/progressiva.jpg" alt="Resultado de Progressiva">
+                    <div class="gallery-overlay">
+                        <h3>Progressiva Perfeita</h3>
+                        <p>Fios alinhados e brilhantes</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- Imagem 2: Coloração -->
+                    <img src="images/coloracao.jpg" alt="Resultado de Coloração">
+                    <div class="gallery-overlay">
+                        <h3>Coloração Vibrante</h3>
+                        <p>Tons que realçam sua beleza</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <!-- Imagem 3: Corte -->
+                    <img src="images/corte.jpg" alt="Corte Moderno">
+                    <div class="gallery-overlay">
+                        <h3>Corte Personalizado</h3>
+                        <p>Modelagem que valoriza seu visual</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Entre em Contato</h2>
+                
+                <div class="contact-items-wrapper">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Endereço</h4>
+                            <p>Rua Prefeito Juvenal Rodrigues Soares, 20<br>Centro, Silveiras - SP</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Telefone/WhatsApp</h4>
+                            <p>(12) 99604-5974</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Instagram</h4>
+                            <p>@rejeanepradohair</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Horário de atendimento atualizado -->
+                <div class="hours">
+                    <h3>Horário de Atendimento</h3>
+                    <p>Terça-feira a Sábado: a partir das 14:00h</p>
+                    <p>Domingo e Segunda: Fechado</p>
+                    <p><strong>Atendimento exclusivo com hora marcada</strong></p>
+                </div>
+                
+                <a href="https://wa.me/5512996045974" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Agende pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="copyright">
+                © 2025 Espaço Hair Rejeane Prado | Todos os direitos reservados
+            </div>
+            <div class="social-links">
+                <a href="https://www.instagram.com/rejeanepradohair" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/5512996045974" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Sticky header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav ul');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    nav.style.display = 'none';
+                }
+            });
+        });
+        
+        // Animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.service-card, .mission-card, .gallery-item').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
